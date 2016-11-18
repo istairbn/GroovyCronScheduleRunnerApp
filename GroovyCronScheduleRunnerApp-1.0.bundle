@@ -1,15 +1,15 @@
-<Bundle name="FileScannerApp" version="1.0" system="false">
+<Bundle name="GroovyCronScheduleRunnerApp" version="1.0" system="false">
   <status>UNINSTALLED</status>
   <owner>ben.newton@excelian.com</owner>
 	<services>
 	     <Service>
-	      <name>PPQFileScanner2</name>
-	      <resourceSelection>AgentId containsAny CDCS199050,BXTS199050</resourceSelection>
-	      <fork>false</fork>
+	      <name>ExampleScript</name>
+	      <resourceSelection>AgentId contains 0</resourceSelection>
+	      <fork>true</fork>
 	      <background>true</background>
 	      <instanceCount>-1</instanceCount>
-	      <pauseSeconds>1200</pauseSeconds>
-	      <script>powerShellRunner.groovy PPQSRECurves.ps1</script>
+	      <pauseSeconds>300</pauseSeconds>
+	      <script>GroovyCronScheduleRunner.groovy scheduler.properties YOURSCRIPTHERE.groovy</script>
 	    </Service>
 	</services>
 </Bundle>
