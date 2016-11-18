@@ -1,0 +1,15 @@
+<Bundle name="FileScannerApp" version="1.0" system="false">
+  <status>UNINSTALLED</status>
+  <owner>ben.newton@excelian.com</owner>
+	<services>
+	     <Service>
+	      <name>PPQFileScanner2</name>
+	      <resourceSelection>AgentId containsAny CDCS199050,BXTS199050</resourceSelection>
+	      <fork>false</fork>
+	      <background>true</background>
+	      <instanceCount>-1</instanceCount>
+	      <pauseSeconds>1200</pauseSeconds>
+	      <script>powerShellRunner.groovy PPQSRECurves.ps1</script>
+	    </Service>
+	</services>
+</Bundle>
